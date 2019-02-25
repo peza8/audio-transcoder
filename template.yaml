@@ -2,11 +2,11 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
 
 Description: >-
-  Microservice to create a single radcast for a user - downloading, transcoding and 
-  concatenating individual audio files to make up the full radcast
+  Microservice to create a single audio file - downloading, transcoding and 
+  concatenating individual audio files to make up the homogenous file
 
 Resources:
-  createSingleRadcast:
+  transcodeAudio:
     Type: AWS::Serverless::Function
     Properties:
       Runtime: nodejs8.10
@@ -20,5 +20,5 @@ Resources:
         Api:
           Type: Api
           Properties:
-            Path: /createSingleRadcast
+            Path: /transcodeAudio
             Method: POST
