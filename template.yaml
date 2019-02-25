@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+
+Description: >-
+  Microservice to create a single radcast for a user - downloading, transcoding and 
+  concatenating individual audio files to make up the full radcast
+
+Resources:
+  createSingleRadcast:
+    Type: AWS::Serverless::Function
+    Properties:
+      Runtime: nodejs8.10
+      Handler: index.handler
+      MemorySize: 2048
+      Timeout: 300
+      Environment:
+        Variables:
+          S3_BUCKET: radcast-code-store
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /createSingleRadcast
+            Method: POST
