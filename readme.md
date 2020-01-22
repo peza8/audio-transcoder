@@ -1,5 +1,10 @@
-# Radcast Audio Stitcher Microservice: Einstein
+# Radcast Audio Stitcher Microservice
 ![Alt text](./supporting-files/Einstein-node-cover-art.png)
+
+## Note NB!!
+---
+
+This project is being open-sourced, but is still a work-in-progress. It was designed be a horizontally audio-processing micro-service for deployement on AWS Lambda. In order to complete the open sourcing, it needs to be generalised. Coming soon! 
 
 ## Overview
 
