@@ -7,7 +7,7 @@
     "postinstall": "npm rebuild grpc ffprobe-static ffmpeg-static --target=8.1.0 --target_arch=x64 --target_platform=linux --target_libc=glibc "
   },
   "dependencies": {
-    "axios": "^0.1.0",
+    "axios": "^0.18.1",
     "firebase-admin": "5.12.1",
     "ffmpeg-static": "^2.3.0",
     "ffprobe-static": "~2.0.0",
